@@ -20,24 +20,24 @@ case "$typ" in
 	echo "Rodzaj : Trening Biegowy" >> dziennik.txt
 	echo '-Czas rozgrzewki'
 		read hroz
-	echo '-Ilosc kilometrów w rozgrzewce'
+	echo '-Ilosc kilometrow w rozgrzewce'
 		read rozb
 	echo "Czas rozgrzewki $hroz Dlugosc: $rozb km" >> dziennik.txt
 	echo '-Dalszy trening'
 	echo 'Ciagly -  c'
-	echo 'Interwa³- i'
+	echo 'Interwal- i'
 	echo 'Tempo - t'
 	read typt
 	if [ $typt = "c" ]; then 
 		echo "Ciagly:">>dziennik.txt
-		echo 'Ilosc kilometów:'
+		echo 'Ilosc kilometow:'
 			read ciaglyd
 		echo 'Czas calkowity'
 			read czasb;
 		echo "Dystans:  $ciaglyd Czas: czasb;">>dziennik.txt	
 	elif [ $typt = "i" ]; then 
 		echo "Interwal:">>dziennik.txt
-		echo 'Ilosc odcinków'
+		echo 'Ilosc odcinkow'
 			read ileinterw
 		echo "Dlugosc odcinka:"
 			read odcinek
@@ -45,20 +45,20 @@ case "$typ" in
 		x=1;
 		while [ $x -le $ileinterw ]; do
 		
-		echo "Czas w którym zostal przebyty"
+		echo "Czas w ktorym zostal przebyty"
 			read czas
 		echo "Odcinek: $odcinek Czas: $czas ">>dziennik.txt
 		x=$x+1
 		done;
 	elif [ $typt = "t" ]; then 
 		echo "Tempo:">>dziennik.txt
-		echo 'Ilosc odcinków w sumie:'
+		echo 'Ilosc odcinkow w sumie:'
 		read ilodcinkow
 		x=1;
 		while [ $x -le $ilodcinkow ]; do
 		echo " odcinek nr: $i dystans"
 			read odcinek
-		echo "Czas w którym zostal przebyty"
+		echo "Czas w ktorym zostal przebyty"
 			read czas
 		echo "Odcinek nr $i:">>dziennik.txt
 		echo "Dlugosc: $odcinek km Czas: $czas">>dziennik.txt
@@ -68,7 +68,7 @@ case "$typ" in
 		echo 'Rozbieganie'
 		echo 'Dystans'
 		read dystans
-		echo "Czas w którym zosta³ przebyty"
+		echo "Czas w ktorym zostal przebyty"
 		read czas
 		echo "Rozbieganie: dystans: $dystans czas: 
 $czas">>dziennik.txt;
@@ -79,38 +79,38 @@ $czas">>dziennik.txt;
 	echo '-Czas rozgrzewki'
 	read hroz
 	echo "Czas rozgrzewki $hroz km" >> dziennik.txt
-	echo '-Ilosc kilometrów w rozgrzewce'
+	echo '-Ilosc kilometrow w rozgrzewce'
 	read rozb
 	echo "Dlugosc: $rozb" >> dziennik.txt
 	echo 'Sila:'
 	echo '-Pilki t/n'
 	read odpp
 	if [ $odpp = "t" ]; then
-		echo 'Przód'
+		echo 'Przod'
 		echo "Pilki:">>dziennik.txt
 		echo '-Ilosc serii'
 			read seria
-		echo '-Ilosc powtórzeñ w serii'
+		echo '-Ilosc powtorzen w serii'
 			read powt
-		echo "Przód: ilosc serii: $seria powtórzeñ: 
+		echo "Przod: ilosc serii: $seria powtorzen: 
 $powt">>dziennik.txt;
 		echo 'Grzbiety'
 		echo '-Ilosc serii'
 			read seria
-		echo '-Ilosc powtórzeñ w serii'
+		echo '-Ilosc powtorzen w serii'
 			read powt
-		echo "Grzbiety: ilo¶æ serii: $seria powtórzeñ: 
+		echo "Grzbiety: ilosc serii: $seria powtorzen: 
 $powt">>dziennik.txt;
 	fi
-	echo '-P³otki t/n'
+	echo '-Plotki t/n'
 	read odppl
 	if [ $odppl = "t" ]; then
 		echo "Plotki:">>dziennik.txt
 		echo '-Ilosc serii'
 			read seria
-		echo '-Ilosc powtórzeñ w serii'
+		echo '-Ilosc powtorzen w serii'
 			read powt
-		echo "  ilosc serii $seria powtórzeñ 
+		echo "  ilosc serii $seria powtorzen 
 $powt">>dziennik.txt;
 	fi
 	echo '-Skipy t/n'
@@ -119,9 +119,9 @@ $powt">>dziennik.txt;
 		echo "Skipy:">>dziennik.txt
 		echo '-Ilosc serii'
 			read seria
-		echo '-Ilosc powtórzeñ w serii'
+		echo '-Ilosc powtorzen w serii'
 			read powt
-		echo "ilosc serii: $seria powtórzeñ: 
+		echo "ilosc serii: $seria powtorzen: 
 $powt">>dziennik.txt;
 	fi	;;
 "s")
@@ -129,32 +129,32 @@ $powt">>dziennik.txt;
 	echo '-Pilki t/n'
 	read odpp
 	if [ $odpp = "t" ]; then
-		echo 'Przód'
+		echo 'Przod'
 		echo "Pilki:">>dziennik.txt
 		echo '-Ilosc serii'
 		read seria
-		echo '-Ilosc powtórzeñ w serii'
+		echo '-Ilosc powtorzen w serii'
 		read powt
-		echo "Przód: ilosc serii: $seria powtórzen: 
+		echo "Przod: ilosc serii: $seria powtorzen: 
 $powt">>dziennik.txt
 		echo 'Grzbiety'
 		echo '-Ilosc serii'
 		read seria
-		echo '-Ilosc powtórzeñ w serii'
+		echo '-Ilosc powtorzen w serii'
 		read powt
-		echo "Grzbiety: ilosc serii: $seria powtórzeñ: 
+		echo "Grzbiety: ilosc serii: $seria powtorzen: 
 $powt">>dziennik.txt;
 	
 	fi
-	echo '-P³otki t/n'
+	echo '-Plotki t/n'
 	read odppl
 	if [ $odppl = "t" ]; then
 		echo "Plotki:">>dziennik.txt
 		echo '-Ilosc serii'
 		read seria
-		echo '-Ilosc powtórzeñ w serii'
+		echo '-Ilosc powtorzen w serii'
 		read powt
-		echo "  ilosc serii $seria powtórzeñ 
+		echo "  ilosc serii $seria powtorzen 
 $powt">>dziennik.txt;
 	fi
 	echo '-Skipy t/n'
@@ -163,12 +163,12 @@ $powt">>dziennik.txt;
 		echo "Skipy:">>dziennik.txt
 		echo '-Ilosc serii'
 			read seria
-		echo '-Ilosc powtórzeñ w serii'
+		echo '-Ilosc powtorzen w serii'
 			read powt
-		echo "ilosc serii: $seria powtórzeñ: 
+		echo "ilosc serii: $seria powtorzen: 
 $powt">>dziennik.txt;
 	fi
-	echo '-Si³ownia t/n'
+	echo '-Silownia t/n'
 		echo "Silownia:">>dziennik.txt
 		read odpsi
 		if [ $odpsi = "t" ]; then
@@ -195,6 +195,5 @@ $powt">>dziennik.txt;
 		fi	;;	
 esac
 echo "------------------------------------------------">>dziennik.txt
-
 
 
